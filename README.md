@@ -1,70 +1,142 @@
-# Getting Started with Create React App
+This project is a small React application developed as a presentation of study/practice of learning outcomes.
+The aim of the project is to demonstrate core React concepts through a simple and understandable application without complex logic or external libraries.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The application allows users to:
 
-## Available Scripts
+View a list of tasks
 
-In the project directory, you can run:
+Mark tasks as completed
 
-### `npm start`
+Observe how React updates the UI efficiently
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Learning Objectives Covered
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project demonstrates the following React concepts:
 
-### `npm test`
+Virtual DOM
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+JSX
 
-### `npm run build`
+Components (Functional and Class Components)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Props
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+State
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Lifecycle Methods
 
-### `npm run eject`
+React Fragments
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Event Handling
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+React
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+JavaScript (ES6)
 
-## Learn More
+HTML
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+CSS (Inline Styling)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Project Structure
+src/
+┣ components/
+┃ ┣ Header.js
+┃ ┣ TaskList.js
+┃ ┣ TaskItem.js
+┃ ┗ Footer.js
+┣ App.js
+┣ index.js
+Explanation of Key Concepts Used
+JSX (JavaScript XML)
 
-### Code Splitting
+JSX is used in all components to write HTML-like syntax inside JavaScript files, making the UI structure easier to understand.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Example:
 
-### Analyzing the Bundle Size
+<h1>Student Task Tracker</h1>
+Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The application is divided into reusable components:
 
-### Making a Progressive Web App
+Functional Components: Header, TaskItem, Footer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Class Component: TaskList
 
-### Advanced Configuration
+This makes the application modular and easy to maintain.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Props
 
-### Deployment
+Props are used to pass data from parent components to child components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Example:
 
-### `npm run build` fails to minify
+TaskList passes task data and functions to TaskItem using props.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+State
+
+State is used inside the TaskList class component to manage the list of tasks and their completion status.
+
+When the state changes, React automatically updates the UI.
+
+Lifecycle Method
+
+The lifecycle method componentDidMount() is used in the TaskList component to demonstrate when a component is mounted.
+
+Example:
+
+componentDidMount() {
+console.log("TaskList component mounted");
+}
+React Fragment
+
+Fragments are used to group elements without adding extra nodes to the DOM.
+
+Example:
+
+<>
+{/_ Multiple elements _/}
+</>
+Event Handling
+
+Event handlers are used to handle user interactions such as clicking a checkbox to mark a task as completed.
+
+Example:
+
+onChange={() => toggleTask(task.id)}
+Virtual DOM
+
+React uses the Virtual DOM to efficiently update only the parts of the UI that change when the state is updated, improving performance.
+
+This happens automatically when state changes.
+
+How to Run the Project
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm start
+
+Open your browser and visit:
+
+http://localhost:3000
+Deployment
+
+The project can be deployed using platforms such as:
+
+Netlify
+
+Vercel
+
+GitHub Pages
+
+The deployment demonstrates how a React application can be built and hosted online.
+
+Conclusion
+
+This project successfully demonstrates the fundamental concepts of React in a simple and practical way.
+It serves as a learning exercise and a presentation-ready project that shows understanding of React’s core principles.
