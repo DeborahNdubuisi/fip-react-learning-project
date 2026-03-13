@@ -1,22 +1,45 @@
-import styled from "styled-components";
-import Header from "./components/Header";
-import TaskList from "./components/TaskList";
-import Footer from "./components/Footer";
-
-const AppContainer = styled.div`
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  min-height: 100vh;
-  padding: 20px;
-`;
+import Button from "./components/Button";
+import Input from "./components/Input";
+import Checkbox from "./components/Checkbox";
+import Card from "./components/Card"
+import Table from "./components/Table";
+import Form from "./components/Form";
 
 function App() {
+
+  const users = [
+    { name: "Deborah", age: 23 },
+    { name: "John", age: 25 }
+  ];
+
   return (
-    <AppContainer>
-      <Header />
-      <TaskList />
-      <Footer />
-    </AppContainer>
+    <div>
+
+      <h1>Reusable React Components</h1>
+
+      <Card title="Form Example">
+        <Form />
+      </Card>
+
+      <Card title="Inputs">
+        <Input type="text" placeholder="Username" />
+        <Input type="password" placeholder="Password" />
+      </Card>
+
+      <Card title="Checkbox">
+        <Checkbox label="Accept Terms" />
+      </Card>
+
+      <Card title="Buttons">
+        <Button text="Save" />
+        <Button text="Delete" />
+      </Card>
+
+      <Card title="User Table">
+        <Table data={users} />
+      </Card>
+
+    </div>
   );
 }
 

@@ -165,3 +165,156 @@ This project successfully demonstrates the **implementation of Styled Components
 By replacing traditional CSS with component-based styling, the application becomes more modular, maintainable, and scalable.
 
 The project highlights how **Styled Components improve the organization and structure of styling in modern React development**.
+
+# Reusable Components React Project
+
+This project demonstrates the creation and use of **reusable components in a React application**.
+The goal of the project is to practice component-based development by building multiple UI elements that can be reused across different parts of a web application.
+
+All components are displayed on **a single page** to demonstrate how they can be reused and combined to build a complete interface.
+
+---
+
+## Learning Objective
+
+The objective of this project is to understand and demonstrate:
+
+- Creating reusable components in React
+- Passing data between components using **props**
+- Building modular UI structures
+- Reusing components multiple times within a page
+- Improving code maintainability and reusability
+
+---
+
+## Technologies Used
+
+- **React**
+- **JavaScript (ES6)**
+- **JSX**
+- **HTML**
+- **CSS / Inline Styling**
+
+---
+
+## Reusable Components Implemented
+
+The following reusable components were created for this project:
+
+### Button Component
+
+A reusable button component that accepts text and click actions.
+
+Example use:
+
+```jsx
+<Button text="Submit" />
+<Button text="Cancel" />
+```
+
+---
+
+### Input Component
+
+A reusable input field that can accept different input types and placeholders.
+
+Example:
+
+```jsx
+<Input type="text" placeholder="Enter your name" />
+<Input type="email" placeholder="Enter your email" />
+```
+
+---
+
+### Checkbox Component
+
+A reusable checkbox component used for selecting options.
+
+Example:
+
+```jsx
+<Checkbox label="Accept Terms and Conditions" />
+```
+
+---
+
+### Card Component
+
+A container component used to wrap other elements and organize the layout.
+
+Example:
+
+```jsx
+<Card title="User Information">
+  <p>Name: Deborah</p>
+</Card>
+```
+
+---
+
+### Table Component
+
+A reusable table component used to display structured data.
+
+Example:
+
+```jsx
+<Table data={users} />
+```
+
+---
+
+### Form Component
+
+A form component that combines reusable **Input** and **Button** components to collect user information.
+
+Example:
+
+```jsx
+<Form />
+```
+
+---
+
+## Project Structure
+
+```
+src
+ ┣ components
+ ┃ ┣ Button.js
+ ┃ ┣ Input.js
+ ┃ ┣ Checkbox.js
+ ┃ ┣ Card.js
+ ┃ ┣ Table.js
+ ┃ ┗ Form.js
+ ┣ App.js
+ ┣ index.js
+```
+
+Each component is designed to be **independent and reusable**, making it easy to use them across different parts of the application.
+
+---
+
+## How the Components Are Reusable
+
+Reusable components are designed to accept **props**, which allows them to display different content depending on how they are used.
+
+For example:
+
+```
+<Button text="Save" />
+<Button text="Delete" />
+```
+
+The same component is reused with different values.
+
+---
+
+## Conclusion
+
+This project demonstrates how **React components can be designed for reuse**, allowing developers to build scalable and maintainable applications.
+
+By breaking the UI into reusable pieces such as buttons, inputs, tables, and forms, the application becomes easier to manage and extend.
+
+Reusable components are a core concept in **modern React development** and help improve both productivity and code organization.
